@@ -26,7 +26,7 @@ RUN pip install --upgrade awscli
 ADD log4j.docker.properties /opt/secor/log4j.docker.properties
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+CMD /docker-entrypoint.sh
 
 # used for temp-files that are uploaded
 VOLUME /tmp
